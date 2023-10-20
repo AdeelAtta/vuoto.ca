@@ -1,27 +1,36 @@
 {
-  "name": "nextjs",
+  "name": "vuotov1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.6"
+    "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@tinymce/tinymce-react": "^4.3.0",
+    "bcrypt": "^5.1.0",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.1",
+    "next": "13.4.7",
+    "next-redux-wrapper": "^8.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.10.1",
+    "react-redux": "^8.1.1",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2",
+    "suneditor-react": "^3.6.1",
+    "swiper": "^9.4.1"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10",
-    "postcss": "^8",
-    "tailwindcss": "^3",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.6"
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
   }
 }
