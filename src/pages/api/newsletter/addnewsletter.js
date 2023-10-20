@@ -51,4 +51,4 @@ const handler = async (req, res) => {
 }
 
 
-export default db(handler);
+export default db(cors(handler));
