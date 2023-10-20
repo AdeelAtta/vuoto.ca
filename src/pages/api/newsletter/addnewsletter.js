@@ -10,7 +10,12 @@ const cors = Cors({
   });
 
 const handler = async (req, res) => {
+
     if (req.method == 'POST') {
+        res.setHeader('Access-Control-Allow-Origin', 'https://www.vuoto.ca');
+        res.setHeader('Access-Control-Allow-Methods', 'POST');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
         try {
             await Promise.all([
                 check("email")
@@ -46,4 +51,4 @@ const handler = async (req, res) => {
 }
 
 
-export default db(cors(handler));
+export default db(handler);
