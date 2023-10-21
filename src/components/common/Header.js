@@ -54,7 +54,7 @@ const Header = () => {
           {/* <li className='pl_8 pr_8 center'><Link className=' t_white light' href='/services' onClick={async () => setMenuActive(false)}>SERVICES</Link></li> */}
           <li className='pl_8 pr_8 center'><Link className='  t_white light' href='/blogs' onClick={async () => setMenuActive(false)}>BLOGS</Link></li>
           <li className='pl_8 pr_8 center'><Link className='  t_white light' href='/faq' onClick={async () => setMenuActive(false)}>FAQ</Link></li>
-          <Link className='btn bg_golden t_white ml_16' href='/contact'>CONTACT US</Link>
+          <Link className='btn bg_golden t_white' href='/contact'>CONTACT US</Link>
         </ul>
 
 
