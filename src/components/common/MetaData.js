@@ -6,7 +6,7 @@ export default function MetaData(metaData){
 
     const DOMAIN_URL = URL
 
-    const {title,description,path,imageSrc,keywords,author="Vuoto , Developers: (Adeel Atta : Hammad shamir : Muhamm), Copywriter: Marco."} = metaData;
+    const {title,description,path,imageSrc,keywords,author="Vuoto , Copywriter: Marco Cianci, Developers: (Adeel Atta & Hammad shamir & Tahir Ali & ) ,"} = metaData;
     const url = `${DOMAIN_URL+path}`;
     return (
         <Head>
