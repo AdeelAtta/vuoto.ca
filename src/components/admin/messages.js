@@ -17,13 +17,11 @@ const Messages = () => {
         const response = await fetch(`${URL}api/contact/getcontact`)
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             const messageList = data.contacts;
             messageList?.reverse()
             setMessagesList([...messageList])
 
         } else {
-            console.log(response);
             toast.error('SERVER ERROR: Contact Messages Fetching Failed!');
         }
     }

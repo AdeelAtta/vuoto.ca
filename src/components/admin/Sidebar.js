@@ -26,8 +26,6 @@ const Sidebar = ({logout,setPage,page}) => {
     // const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
-    // const path = router.pathname
-    // console.log(path);
     return (
         <div style={{ width: isOpen ? "50px" : "250px", overflow:'hidden' }} className="sidebar relative" >
             <div className="top_section mb_16 mt_16 ">

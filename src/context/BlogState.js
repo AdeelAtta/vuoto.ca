@@ -17,19 +17,16 @@ const BlogState = (props) => {
         if (response.ok) {
             setBlogs(data)
         }
-        console.log("Failed to fetch");
     }
     const addBlog = async (data) => {
-        console.log(data);
         try {
             const res = await fetch(`${URL}api/blogs/addBlog`, {
                 method: 'POST',
                 body: JSON.stringify(data)
             })
             const resData = await res.json()
-            console.log(resData);
         } catch (err) {
-            console.log(err);
+            console.error(err);
         }
     }
     return (

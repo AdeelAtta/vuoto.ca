@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 const db = handler => async (req, res) => {
     try {
         if (mongoose.connections[0].readyState) {
-            console.log('connected to MongoDB')
             return handler(req, res);
         }
 

@@ -24,7 +24,6 @@ const Subscribers = () => {
             setEmails([...emailsList])
 
         } else {
-            console.log(response);
             toast.error('SERVER ERROR: Subscribed Emails Fetching Failed!');
         }
     }
