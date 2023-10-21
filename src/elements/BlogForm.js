@@ -104,11 +104,8 @@ function BlogForm({ white }) {
                     <span className="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
                     <div className="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                        <div className='stack center expand_100'><Image className='stack center expand_50' src={`/assets/shapes/downarrow.gif`} width={100} height={300} alt="direction arrow" /></div>
-                        <div className="stack expand_100 left m_0 ">
-                            <h2 className='center bg_l_gray t_golden padding_16 '>Blog Preview</h2>
-                            <p className='t_purple center mb_100 padding_16'>Get a Sneak Peek of Your Blog before uploading!</p>
-                            <div className='expand_80'>
+                        <div className="stack expand_100 left m_0 ">                            
+                            <div className='expand_100'>
                                 <BlogDetail title={data.title} thumbnail={data.thumbnail} date={`24/10/2023`} content={desc} href={data.title} />
                             </div>
                             <button type='submit' className='mt_50  btn bg_golden t_white expand_50 ml-auto mr-auto'>UPLOAD POST</button>
