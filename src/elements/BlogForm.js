@@ -105,10 +105,7 @@ function BlogForm({ white }) {
                     <div className="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                         <div className="stack expand_100 left m_0 ">                            
-                            <div className='expand_100'>
                                 <BlogDetail title={data.title} thumbnail={data.thumbnail} date={`24/10/2023`} content={desc} href={data.title} />
-                            </div>
-                            <button type='submit' className='mt_50  btn bg_golden t_white expand_50 ml-auto mr-auto'>UPLOAD POST</button>
                         </div>
                         </div>
                         <div className="bg-gray-200 px-4 py-3 text-right">
