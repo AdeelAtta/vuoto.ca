@@ -2,7 +2,6 @@
 import React, { useState, useContext } from 'react'
 import Image from 'next/image'
 import BlogDetail from '@/components/BlogDetail';
-import { BlogContext } from '@/context/BlogState';
 import toast, { Toaster } from 'react-hot-toast';
 import dynamic from "next/dynamic";
 import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
@@ -92,6 +91,39 @@ function BlogForm({ white }) {
 
     const tooglePreview = () => setIsPreview(!isPreview);
 
+    const showModal = () => {
+
+
+        return (
+
+            <div className="fixed z-10 overflow-y-auto top-0 w-full left-0 " id="modal">
+                <div className="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                    <div className="fixed inset-0 transition-opacity">
+                        <div className="absolute inset-0 bg-gray-900 opacity-75" />
+                    </div>
+                    <span className="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+                    <div className="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div className='stack center expand_100'><Image className='stack center expand_50' src={`/assets/shapes/downarrow.gif`} width={100} height={300} alt="direction arrow" /></div>
+                        <div className="stack expand_100 left m_0 ">
+                            <h2 className='center bg_l_gray t_golden padding_16 '>Blog Preview</h2>
+                            <p className='t_purple center mb_100 padding_16'>Get a Sneak Peek of Your Blog before uploading!</p>
+                            <div className='expand_80'>
+                                <BlogDetail title={data.title} thumbnail={data.thumbnail} date={`24/10/2023`} content={desc} href={data.title} />
+                            </div>
+                            <button type='submit' className='mt_50  btn bg_golden t_white expand_50 ml-auto mr-auto'>UPLOAD POST</button>
+                        </div>
+                        </div>
+                        <div className="bg-gray-200 px-4 py-3 text-right">
+                            <button type="button" className="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2" onClick={ ()=> tooglePreview() }><i className="fas fa-times"></i> Cancel</button>
+                            <button type='submit' className="py-2 px-4 bg_golden text-white rounded mr-2" ><i className="fas fa-plus"></i>UPLOAD POST</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <><Toaster />
             <form onSubmit={handleForm} encType='multipart/form-data' className='stack left mb_100 expand_100'>
@@ -164,21 +196,12 @@ function BlogForm({ white }) {
                 <button type='submit' className='mt_50  btn bg_golden t_white '>UPLOAD POST</button>
 
 
-                {isPreview ?
-                    <>
-                        <a onClick={tooglePreview} className='t_danger light right mt_16'><u>hide Preview</u></a>
-                        <div className='stack center expand_100'><Image className='stack center expand_50' src={`/assets/shapes/downarrow.gif`} width={100} height={300} alt="direction arrow" /></div>
-                        <div className="stack expand_100 left m_0 ">
-                            <h2 className='center bg_l_gray t_golden padding_16 '>Blog Preview</h2>
-                            <p className='t_purple center mb_100 padding_16'>Get a Sneak Peek of Your Blog before uploading!</p>
-                            <div className='expand_80'>
-                                <BlogDetail title={data.title} thumbnail={data.thumbnail} date={`24/10/2023`} content={desc} href={data.title} />
-                            </div>
-                            <button type='submit' className='mt_50  btn bg_golden t_white '>UPLOAD POST</button>
-                        </div>
-                    </> :
-                    <a onClick={tooglePreview} className='t_purple right mt_16'><u>Click here</u> to see Preview of Blog before uploading</a>
-                }
+
+                {isPreview ? showModal()  :
+                    <a onClick={tooglePreview} className='t_purple right mt_16'><u>Click here</u> to see Preview of Blog before uploading</a>}
+
+
+               
             </form>
 
 

@@ -6,7 +6,7 @@ import RecommendBlogs from "@/components/RecommendBlogs"
 import { fetchBlogsService } from "@/utils/services"
 import MetaData from "@/components/common/MetaData"
 
-// import { BlogContext } from "@/context/BlogState"
+
 
 const Blog = ({blogsData}) => {
 
