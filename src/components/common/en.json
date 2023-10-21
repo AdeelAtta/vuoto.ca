@@ -9,6 +9,7 @@
     "pages.index.section.aboutus.title": "About Vuoto",
     "pages.index.section.aboutus.company-intro": "Tackling Taxation Challenges in World of Cryptocurrency and NFTs.",
     "pages.index.section.aboutus.company-detail": " Say Goodbye to Crypto Tax Complexity - Simplify Your Crypto Tax Journey with VUOTO - Guided by Our Founder and Accountant, Marco. - Now with service available for ",
+    
     "pages.about.section.aboutus.heading": "About Company",
     "pages.about.section.aboutus.description-para1": "VUOTO is a crypto tax reporting service, based in Montreal, Quebec, Canada -led by its founder and accountant , Marco. We use our licensed professional software by Koinly for CPAs-, to produce your gains/loss crypto and nft tax reports needed to complete your personal income tax declarations.",
     "pages.about.section.aboutus.description-para2": "Crypto, while being around for years, is still a very new market segment for the vast majority of people - and that is only more true when considering the NFT space.",
@@ -42,5 +43,11 @@
     "pages.index.section.contactus.heading": "Get In Touch",
     "pages.index.section.contactus.address": "Based in Montreal, Quebec , Canada",
     "pages.index.section.contactus.email": "cryptotaxservices@gmail.com",
-    "pages.index.section.contactus.form-heading": "Let's get in touch with us"
+    "pages.index.section.contactus.form-heading": "Let's get in touch with us",
+
+
+
+    "pages.index.section.subscribe.title": "Subscribe to our Newsletters",
+    "pages.index.section.subscribe.desc": "so you don’t miss a single one/information",
+    "pages.index.section.subscribe.button": "Subscribe"
 }

@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { URL } from '@/utils/constants';
+import FormatText from "./common/FormatText";
+
 function SubcribeBox() {
     let [emailText, setEmailText] = useState(``);
 
@@ -38,10 +40,10 @@ function SubcribeBox() {
             <div><Toaster /></div>
             <div className="newsletter_box shelf center wrap expand_80 pt_50 pb_50  mb_100 shadow radius_20 bg_white">
                 {/* <h2 className=' '>Get DeFi and Crypto regulation and tax, news and updates...</h2> */}
-                <p className="font_13 t_gray margin_8 padding_8 expand_50 left light" ><span className='bold font_16'>Subscribe Newsletters</span> so you don’t miss a single newsletter</p>
+                <p className="font_13 t_gray margin_8 padding_8 expand_50 left light" ><span className='bold font_16'><FormatText text={'pages.index.section.subscribe.title'} /></span> <FormatText text={'pages.index.section.subscribe.desc'} /></p>
                 <form className="expand_50 bg_l_gray t_gray padding_8 " onSubmit={handleSubmit}>
                     <input onChange={handleChange} className=" expand_70 bg_transparent padding_8 font_13 " type="email" placeholder="Enter your email" value={emailText} required />
-                    <button type="submit" className="btn bg_golden t_white" >SUBSCRIBE</button>
+                    <button type="submit" className="btn bg_golden t_white" ><FormatText text={'pages.index.section.subscribe.button'} /></button>
                 </form>
             </div>
         </>
