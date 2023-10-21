@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { URL } from '@/utils/constants';
-import FormatText from "./common/FormatText";
+import FormatText from './FormatText';
 
 function SubcribeBox() {
     let [emailText, setEmailText] = useState(``);
