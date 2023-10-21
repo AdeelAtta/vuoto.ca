@@ -187,12 +187,13 @@ function BlogForm({ white }) {
                     }}
                     height='300px'
                 />
-                <button type='submit' className='mt_50  btn bg_golden t_white expand_50 ml-auto mr-auto'>UPLOAD POST</button>
+                <div className='flex expand_50 ml-auto'>
+                <button type='button' onClick={tooglePreview} className='mt_50  btn bg_golden t_white expand_50 mr-auto'>Preview</button>
+                <button type='submit' className='mt_50  btn bg_golden t_white expand_50 ml-auto'>UPLOAD POST</button>
+                </div>
 
 
-
-                {isPreview ? showModal()  :
-                    <a onClick={tooglePreview} className='t_purple right mt_16'><u>Click here</u> to see Preview of Blog before uploading</a>}
+                {isPreview && showModal()}
 
 
                
