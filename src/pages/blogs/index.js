@@ -89,7 +89,11 @@ export default Blog;
 
 
 
-export async function getStaticProps({params}){
+export async function getServerSideProps({params}){
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
 
   try {
     const response = await fetchBlogsService();

@@ -45,40 +45,45 @@ const BlogGrid = ({blog,blogs}) => {
 export default BlogGrid;
 
 
-export async function getStaticPaths() {
+// export async function getStaticPaths() {
 
-    let paths = []
-    try {
-      const response = await fetchBlogsService();
-      if (!response.ok) {
-        return {
-          paths: [],
-          fallback: true,
-        }
-      }
-      // const data = await response.json();
-      // const blogs = data.blogs;
+//     let paths = []
+//     try {
+//       const response = await fetchBlogsService();
+//       if (!response.ok) {
+//         return {
+//           paths: [],
+//           fallback: true,
+//         }
+//       }
+//       // const data = await response.json();
+//       // const blogs = data.blogs;
   
-      //setting all available paths for static Generation 
-      // blogs.forEach(blog => {
-      //   paths.push({ params: { slug: blog?.slug } });
-      // })
-      //setting all available paths for static Generation 
+//       //setting all available paths for static Generation 
+//       // blogs.forEach(blog => {
+//       //   paths.push({ params: { slug: blog?.slug } });
+//       // })
+//       //setting all available paths for static Generation 
   
-      return {
-        paths: [...paths],
-        fallback: true,  // true when we want ISG which is not supported in static exports
-      }
-    } catch (error) {
-      return {
-        paths: [],
-        fallback: false,
-      }
-    }
-  }
+//       return {
+//         paths: [...paths],
+//         fallback: true,  // true when we want ISG which is not supported in static exports
+//       }
+//     } catch (error) {
+//       return {
+//         paths: [],
+//         fallback: false,
+//       }
+//     }
+//   }
 
 
-export async function getStaticProps(context){
+export async function getServerSideProps(context){
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+
     const { params } = context;
     try {
       const response = await fetchBlogsService();
@@ -86,8 +91,7 @@ export async function getStaticProps(context){
           return {
               props: {
                   blogsData: [],
-              },
-              revalidate: 1  // it revalidate Static generated Pages
+              } // it revalidate Static generated Pages
           }
       }
       const data = await response.json();
@@ -100,8 +104,7 @@ export async function getStaticProps(context){
         props: {
           blogs:[...blogs],
           blog: { ...blog[0] },
-        },
-        revalidate: 1  // it revalidate Static generated Pages
+        }
       }
   } catch (error) {
       console.error(error);

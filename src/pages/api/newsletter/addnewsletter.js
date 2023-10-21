@@ -6,7 +6,7 @@ import Cors from 'micro-cors';
 
 const cors = Cors({
     allowedMethods: ['POST'], // Specify the allowed HTTP methods
-    origin: 'https://www.vuoto.ca', // Specify the allowed origin (you can use '*' for any origin)
+    origin: '*', // Specify the allowed origin (you can use '*' for any origin)
   });
 
 const handler = async (req, res) => {
