@@ -1,5 +1,5 @@
-import { validationResult, check } from "express-validator";
 import db from "../../../../backend/middleware/db";
+import { validationResult, check } from "express-validator";
 import Auth from "../../../../backend/models/Auth";
 import bcrypt from "bcrypt";
 
