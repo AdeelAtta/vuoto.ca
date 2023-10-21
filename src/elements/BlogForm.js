@@ -102,7 +102,7 @@ function BlogForm({ white }) {
                         <div className="absolute inset-0 bg-gray-900 opacity-75" />
                     </div>
                     <span className="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
-                    <div className="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg lg:max-w-xl sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                    <div className="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg lg:max-w-xl xl:max-w-2xl sm:w-full" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
                         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 max-h-[550px] overflow-scroll">
                         <div className="stack expand_100 left m_0 ">                            
                                 <BlogDetail title={data.title} thumbnail={data.thumbnail} date={`24/10/2023`} content={desc} href={data.title} />
@@ -187,7 +187,7 @@ function BlogForm({ white }) {
                     }}
                     height='300px'
                 />
-                <button type='submit' className='mt_50  btn bg_golden t_white '>UPLOAD POST</button>
+                <button type='submit' className='mt_50  btn bg_golden t_white expand_50 ml-auto mr-auto'>UPLOAD POST</button>
 
 
 
