@@ -13,9 +13,9 @@ const About = () => {
                     <h3 className='font_33 bold t_back mb_16'><FormatText text={'pages.index.section.aboutus.company-intro'} /> </h3>
                     <p className='font_13 light t_gray mt_16 mr_16 mb_16'><FormatText text={'pages.index.section.aboutus.company-detail'} /></p>
                     <ul className='mt_16 mb_50 ml_16 '>
-                        <li className='flex item-center font_13 light t_black margin_8'><FiCheck className='t_golden' />🇨🇦 Canada</li>
-                        <li className='flex item-center font_13 light t_black margin_8'><FiCheck className='t_golden' />🇺🇸 Unites States</li>
-                        <li className='flex item-center font_13 light t_black margin_8'><FiCheck className='t_golden' /> & Many more...</li>
+                        <li className='flex item-center font_13 light t_black margin_8'><FiCheck className='t_golden' /> Canada</li>
+                        <li className='flex item-center font_13 light t_black margin_8'><FiCheck className='t_golden' /> Unites States</li>
+                        <li className='flex item-center font_13 light t_black margin_8'>& Many more...</li>
                     </ul>
                     <Link className='btn bg_golden t_white ' href='/about'>More Details</Link>
                 </div>
