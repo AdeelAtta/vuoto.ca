@@ -187,9 +187,9 @@ function BlogForm({ white }) {
                     }}
                     height='300px'
                 />
-                <div className='flex expand_50 ml-auto mr-[5%]'>
-                <button type="button" className="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2 " onClick={ ()=> tooglePreview() }><i className="fas fa-times"></i> Preview</button>
-                <button type='submit' className='mt_50  btn bg_golden t_white expand_50 ml-auto'>UPLOAD POST</button>
+                <div className='flex expand_50 ml-auto mr-[5%] mt-[3rem]'>
+                <button type="button" className="btn bg-gray-500 text-white rounded hover:bg-gray-700 " onClick={ ()=> tooglePreview() }><i className="fas fa-times"></i> Preview</button>
+                <button type='submit' className=' btn bg_golden t_white expand_50 ml-auto'>UPLOAD POST</button>
                 </div>
 
 
