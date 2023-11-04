@@ -4,13 +4,14 @@ import FormatText from './common/FormatText'
 
 const HeroSection = () => {
     return (
-        <div className='hero_section stack center expand_100 colorful'>
-            <div className='stack expand_100 mt_16 pt_100 center'>
-                <h1 className='font_42 bold t_white  mt_50 mb_50 '>{<FormatText text={'pages.index.section.hero.title'} />}
+        <div className='hero_section shelf justify expand_100 colorful py-20'>
+            <div className='stack center'>
+                <h1 className='text-5xl bold t_white mb-6 left max-w-sm md:ml-10 md:max-w-xl'>{<FormatText text={'pages.index.section.hero.title'} />}
                 </h1>
-                <p className='font_16 light t_l_gray mt_16 mb_16'>{<FormatText text={'pages.index.section.hero.subtitle'} />}</p>
-                <Image className={`hero_image`} width={400} height={380} src='/assets/images/banner.png' alt='tax image' style={{ marginBottom: `-135px` }} />
+                <p className='text-2xl light t_l_gray left md:ml-10 lg:ml-0'>{<FormatText text={'pages.index.section.hero.subtitle'} />}</p>
             </div>
+
+            <Image className='absolute z-[-1] md:relative grayscale-[50%] w-[320px] md:w-auto md:min-w-[450px] md:grayscale-0' width={450} height={450} src="/assets/images/common/heroImage.png" alt="tax image" />
         </div>
     )
 }

@@ -482,9 +482,8 @@ a {
 .colorful {
   background: var(--hero) no-repeat center center/cover;
   position: relative;
-  height: 90vh;
   z-index: -2;
-  margin-bottom: 10px;
+  padding: 30px auto;
 }
 
 .colorful::before {
@@ -492,7 +491,7 @@ a {
   position: absolute;
   left: 0;
   top: 2px;
-  background-image: var(--svgshape);
+  /* background-image: var(--svgshape); */
   background-size: cover;
   background-position: center;
   width: 100%;
