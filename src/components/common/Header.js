@@ -48,13 +48,13 @@ const Header = () => {
           <Link className='btn bg_golden t_white ml_16' href='/contact'>CONTACT US</Link>
         </ul>
 
-        <ul className={`side ${menuActive ? `mobileMenu` : ``} stack justify margin_left_auto font_16 light mr_16`}>
-          <li className='pl_8 pr_8 center'><Link className=' t_white light' href='/' onClick={async () => setMenuActive(false)}>HOME</Link></li>
-          <li className='pl_8 pr_8 center'><Link className=' t_white light' href='/about' onClick={async () => setMenuActive(false)}>ABOUT US</Link></li>
+        <ul className={`side ${menuActive ? ` mobileMenu ` : `  `} stack justify margin_left_auto font_16 light mr_16`}>
+          <li className={`pl_8 pr_8 center ${!menuActive && ` hidden `}`}><Link className=' t_white light' href='/' onClick={async () => setMenuActive(false)}>HOME</Link></li>
+          <li className={`pl_8 pr_8 center ${!menuActive && ` hidden `}`}><Link className=' t_white light' href='/about' onClick={async () => setMenuActive(false)}>ABOUT US</Link></li>
           {/* <li className='pl_8 pr_8 center'><Link className=' t_white light' href='/services' onClick={async () => setMenuActive(false)}>SERVICES</Link></li> */}
-          <li className='pl_8 pr_8 center'><Link className='  t_white light' href='/blogs' onClick={async () => setMenuActive(false)}>BLOGS</Link></li>
-          <li className='pl_8 pr_8 center'><Link className='  t_white light' href='/faq' onClick={async () => setMenuActive(false)}>FAQ</Link></li>
-          <Link className='btn bg_golden t_white' href='/contact'>CONTACT US</Link>
+          <li className={`pl_8 pr_8 center ${!menuActive && ` hidden `}`}><Link className='  t_white light' href='/blogs' onClick={async () => setMenuActive(false)}>BLOGS</Link></li>
+          <li className={`pl_8 pr_8 center ${!menuActive && ` hidden `}`}><Link className='  t_white light' href='/faq' onClick={async () => setMenuActive(false)}>FAQ</Link></li>
+          <Link className={`btn bg_golden t_white ${!menuActive && ` hidden `}`} href='/contact'>CONTACT US</Link>
         </ul>
 
 

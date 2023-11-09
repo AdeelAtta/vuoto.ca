@@ -7,7 +7,7 @@ import ZoomableImage from "./zoomableImage";
 const About = () => {
     return (
         <ColorfulSection key={`About Section`}>
-            <div className='about_section shelf space_around expand_80 wrap mt_100'>
+            <div className='about_section shelf space_around expand_80 wrap mt-0 md:mt_100'>
                 <div className='expand_50 center stack'>
                     {/* <Image className='margin_right_auto margin_left_auto' width={300} height={350} src='/assets/images/about.png' alt={`name`} /> */}
                     <ZoomableImage src="/assets/images/heroImage.png" alt="tax image" />
